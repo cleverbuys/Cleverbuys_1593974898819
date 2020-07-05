@@ -37,6 +37,7 @@ exports.authMapping = {
 	'POST - /api/brands/([^/])+$' : [],
 	'POST - /api/dealerbrands/*$' : [],
 	'DELETE - /api/dealerbrands/([^/])+$' : [],
+	'GET - /api/dealerbrands/findBybrandID/([^/])+$' : [],
 	'GET - /api/dealerbrands/([^/])+$' : [],
 	'GET - /api/dealerbrands/*$' : [],
 	'POST - /api/dealerbrands/([^/])+$' : [],

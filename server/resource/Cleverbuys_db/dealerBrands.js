@@ -75,6 +75,21 @@ app['delete'](properties.api + '/dealerbrands/:id', function (req, res) {
 });
 
 /**
+ * dealerBrandsService.findBybrandID
+ *   @description CRUD ACTION findBybrandID
+ *   @param Objectid key Id of the resource brandID to search
+ *
+ */
+app.get(properties.api + '/dealerbrands/findBybrandID/:key', function (req, res) {
+
+	db_Cleverbuys_db.dealerBrands.find({ 'brandID' : req.params.key}).exec(function (err, list) {
+		if (err) return handleError(err, res);
+		res.send(list);
+	});
+	
+});
+
+/**
  * dealerBrandsService.get
  *   @description CRUD ACTION get
  *   @param ObjectId id Id resource

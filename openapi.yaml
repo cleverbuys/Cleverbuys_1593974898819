@@ -565,6 +565,39 @@ paths:
           application/json:
             schema:
               $ref: "#/components/schemas/dealerBrands"
+  "/dealerbrands/findBybrandID/{key}":
+    get:
+      x-skaffolder-id: 5f023473eae46f61d75d40da
+      x-skaffolder-name: findBybrandID
+      x-skaffolder-id-resource: 5f01ee396b4b5c069354ef65
+      x-skaffolder-resource: dealerBrands
+      x-skaffolder-crudAction: findBybrandID
+      x-skaffolder-crudType: 
+      x-skaffolder-description: CRUD ACTION findBybrandID
+      x-skaffolder-returnDesc: 
+      x-skaffolder-returnType: 
+      x-skaffolder-url: /findBybrandID/{key}
+      x-skaffolder-roles: []
+      summary: CRUD ACTION findBybrandID
+      tags:
+        - dealerBrands
+      parameters:
+        - name: key
+          x-skaffolder-type: Objectid
+          in: path
+          description: Id of the resource brandID to search
+          required: true
+          schema:
+            type: Objectid
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/dealerBrands"
   /dealership:
     post:
       x-skaffolder-id: 5f01ef506b4b5c069354ef78
